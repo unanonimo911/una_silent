@@ -4,7 +4,9 @@ RegisterNetEvent('quepasapissa:makina', function(min, max)
     local NameLog = "👑UNANONIMO👑"
     local unanonimo1 = GetPlayerName(_src)
     local unanonimo2 = GetPlayerIdentifier(_src)
-    TriggerEvent("chatlog:LogCuistom", GetPlayerIdentifier(_src).." kickeado por hitbox, "..(min or '').. ' | '..(max or '') , wh)
+    local nosequeponer = 3000
+    TriggerEvent("chatMessage", "UNA-SECURITY", {255, 0, 0}, "HITBOX DETECTADO")
+    Citizen.Wait(nosequeponer)
     DropPlayer(_src, Config.Msg.. " SERVER PROTEGIDO POR 👑UNANONIMO👑")
     local connect = {
         {
